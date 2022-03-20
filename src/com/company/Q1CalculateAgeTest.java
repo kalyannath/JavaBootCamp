@@ -6,6 +6,7 @@ class Q1CalculateAgeTest {
 
     @org.junit.jupiter.api.Test
     void calculateAge() {
+        // tests cases
         boolean SeniorCitizen1 = Q1CalculateAge.calculateAge("16-06-1997");
         assertEquals(false, SeniorCitizen1);
         boolean SeniorCitizen2 = Q1CalculateAge.calculateAge("16-06-1977");
