@@ -3,34 +3,23 @@ package com.company;
 25.write a program that prints out all the elements of the list that are less than 5.
  */
 
+import java.util.ArrayList;
+
 public class Q25ElementsLessThan5 {
-    public static float[] lessThan5(float ...a) {
-        int len = 0;
+    public static ArrayList<Float> lessThan5(float ...a) {
+        ArrayList<Float> result = new ArrayList<>();
         for (float element: a)
         {
             if (element < 5)
             {
-                len++;
-            }
-        }
-        float[] result = new float[len];
-        int count = 0;
-        for (float element: a)
-        {
-            if (element < 5)
-            {
-                result[count] = element;
-                count++;
+                if (!result.contains(element)) {
+                    result.add(element);
+                }
             }
         }
         return result;
     }
     public static void main(String[] args) {
-        float[] ar1 = lessThan5(1, 3, 6, 7, 8, 3, 9);
-        System.out.println(ar1.length);
-        for (float element: ar1)
-        {
-            System.out.println(element);
-        }
+        System.out.println(lessThan5(1, 3, 6, 7, 8, 3, 9));
     }
 }
